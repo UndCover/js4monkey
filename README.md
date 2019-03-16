@@ -19,6 +19,8 @@ To use user scripts you need to first install a user script manager. Which user 
 
 Browse this site to find a user script you want to try. 
 
+[唱吧音乐下载](https://github.com/UndCover/js4monkey/blob/master/scripts/%E5%94%B1%E5%90%A7%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD.js)
+
 ## Step 3: use the user script
 
 Go to the site the user script affects. It should automatically do its thing. After trying out the user script for a while, go back to where you installed the user script and leave some feedback for the user script's author.
