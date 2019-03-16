@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         唱吧音乐下载
-// @namespace    https://github.com/UndCover/js4monkey
+// @namespace    https://raw.githubusercontent.com/UndCover/js4monkey/master/scripts/%E5%94%B1%E5%90%A7%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD.js
+// @supportURL   https://github.com/UndCover/js4monkey
 // @homepage     https://greasyfork.org/zh-CN/scripts/380471
 // @version      1.01
 // @icon         https://changba.com/favicon.ico
