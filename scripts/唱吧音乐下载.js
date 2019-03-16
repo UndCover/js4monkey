@@ -2,7 +2,7 @@
 // @name         唱吧音乐下载
 // @namespace    https://github.com/UndCover/js4monkey
 // @homepage     https://greasyfork.org/zh-CN/scripts/380471
-// @version      1.0
+// @version      1.01
 // @icon         https://changba.com/favicon.ico
 // @description  唱吧音乐、MV下载
 // @author       UndCover
@@ -62,17 +62,75 @@
     }
     //Base64 end
 
-    // 1. reset width
-    $('span.info').css('width','60px')
-    // 2. get link
-	var _src = "#";
-    var _player=document.getElementById("audio")
-    if(_player){
-    	_src = _player.src;
-    }else{
-    	var vUrl = jplayer.video_url
-    	_src=o(vUrl);
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+                    "SymbianOS", "Windows Phone",
+                    "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
     }
-	var newElement = "<span class='download' data-status='0'><em><a href='"+_src+"'>下载</a></em></span>"
-	$("span.fav").after(newElement);
+
+    function IsPC2(){
+        var system = {
+            win: false,
+            mac: false,
+            xll: false,
+            ipad:false
+        };
+        //检测平台
+        var p = navigator.platform;
+
+        system.win = p.indexOf("Win") == 0;
+        system.mac = p.indexOf("Mac") == 0;
+        system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+        system.ipad = (navigator.userAgent.match(/iPad/i) != null)?true:false;
+
+        if (system.win || system.mac || system.xll ||system.ipad) {
+            platform = 1;
+            return true;
+        } else {
+            platform = 0;
+            return false;
+        }
+    }
+    if(IsPC()){
+        console.log("======================PC=====================")
+        // 1. reset width
+        $('span.info').css('width','60px')
+        // 2. get link
+        var _src = "#";
+        var _player=document.getElementById("audio")
+        if(_player){
+            _src = _player.src;
+        }else{
+            var vUrl = jplayer.video_url
+            _src=o(vUrl);
+        }
+        console.log(_src)
+        var newElement = "<span class='download' data-status='0'><em><a href='"+_src+"'>下载</a></em></span>"
+        $("span.fav").after(newElement);
+    }else{
+        console.log("====================MOBILE===================")
+        var _mplayer=$("audio#audio")
+        if(!_mplayer){
+            _mplayer=$("video#video")
+        }
+
+        if(_mplayer){
+            var _msrc = _mplayer.attr("src")
+            console.log(_msrc)
+            // <div class="user-title">
+            var newElement="<span class='download listen-num ' style='border: solid red 1px;'><em><a href='"+_msrc+"' style='color: red;'>下载</a></em></span>"
+            $("div.user-title").after(newElement);
+        }else{
+            console.log("==============================ERROR========================")
+        }
+    }
 })();
