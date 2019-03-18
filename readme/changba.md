@@ -1,3 +1,6 @@
+## 下载安装
+[唱吧音乐下载](https://github.com/UndCover/js4monkey/blob/master/scripts/%E5%94%B1%E5%90%A7%E9%9F%B3%E4%B9%90%E4%B8%8B%E8%BD%BD.js)
+
 ## 更新日志
 * 2019-03-18添加对移动端的支持
 
