@@ -9,7 +9,7 @@
 ## 捐赠
 如果您觉得脚本对您有帮助，您可以通过支付宝或微信，扫描二维码，捐赠 X元，^_^，谢谢！
 
-支持我 支持我
+![Alipay](https://raw.githubusercontent.com/UndCover/js4monkey/master/readme/alipay.png)  ![Wechat](https://raw.githubusercontent.com/UndCover/js4monkey/master/readme/wechat.png)
 
 ## 免责声明
 本脚本源码公开可见，仅做研究使用，不得用于非法获利， 如产生法律纠纷与脚本作者无关!!!
