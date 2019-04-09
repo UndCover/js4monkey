@@ -1,5 +1,6 @@
 # js4monkey
-
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![Badge](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/#/zh_CN)
 ## Step 1: install a user script manager
 
 To use user scripts you need to first install a user script manager. Which user script manager you can use depends on which browser you use.
